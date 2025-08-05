@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/property-listing-app/static/css/main.9614b0d1.css",
+    "main.js": "/property-listing-app/static/js/main.e009ad01.js",
+    "static/js/453.fb1da22b.chunk.js": "/property-listing-app/static/js/453.fb1da22b.chunk.js",
+    "index.html": "/property-listing-app/index.html",
+    "main.9614b0d1.css.map": "/property-listing-app/static/css/main.9614b0d1.css.map",
+    "main.e009ad01.js.map": "/property-listing-app/static/js/main.e009ad01.js.map",
+    "453.fb1da22b.chunk.js.map": "/property-listing-app/static/js/453.fb1da22b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9614b0d1.css",
+    "static/js/main.e009ad01.js"
+  ]
+}
