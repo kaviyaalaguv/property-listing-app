@@ -1,0 +1,275 @@
+/* index.css */
+
+:root {
+  --bg: #f9fafb;
+  --text: #1f2d3a;
+  --primary: #4f46e5;
+  --card: #ffffff;
+  --muted: #6e7a94;
+  --accent: #ff8c66;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1000px;
+  padding: 16px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.button {
+  padding: 10px 16px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  font-family: inherit;
+}
+
+.button:hover, 
+.button:focus {
+  background-color: #3b3fc1;
+  outline: none;
+}
+
+.card {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.property-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 4px;
+  word-break: break-word;
+}
+
+.small {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.price-badge {
+  background: var(--accent);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.tag {
+  font-size: 12px;
+  background: #4ade80;
+  color: #000;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.modal {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  font-family: inherit;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+  color: var(--text);
+  font-weight: 700;
+  line-height: 1;
+  padding: 0;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: var(--accent);
+  outline: none;
+}
+
+.space-between {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.filter-dark-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.filter-input {
+  min-width: 220px;
+  max-width: 350px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.toggle-button {
+  min-width: 90px;
+}
+
+.form-card {
+  margin-bottom: 24px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.form-row input {
+  flex: 1 1 150px;
+  min-width: 140px;
+}
+
+.add-btn {
+  flex: 0 0 130px;
+  min-width: 120px;
+}
+
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.property-card {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 130px;
+}
+
+.property-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.property-desc {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  flex-grow: 1;
+  word-break: break-word;
+}
+
+.tag-wrapper {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.modal-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.modal-info {
+  flex: 1 1 250px;
+}
+
+.modal-badge {
+  flex: 1 1 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 700px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-row input,
+  .add-btn {
+    flex: 1 1 100%;
+    min-width: auto;
+  }
+
+  .filter-dark-toggle {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-input {
+    max-width: 100%;
+  }
+
+  .toggle-button {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .modal-content {
+    flex-direction: column;
+  }
+
+  .modal-info,
+  .modal-badge {
+    flex: 1 1 100%;
+  }
+}
